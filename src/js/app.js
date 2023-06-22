@@ -41,7 +41,7 @@ function hideLoadingPage() {
 }
 
 // Ritardo di 3.5 secondi prima di chiamare la funzione per nascondere la pagina di caricamento
-setTimeout(hideLoadingPage, 0);
+setTimeout(hideLoadingPage, 7500);
 
 
 /* let nameElement = document.getElementById("name");
