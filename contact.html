@@ -72,12 +72,15 @@
 									<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" /></svg
 							></a>
 						</div>
-						<form action="https://api.staticforms.xyz/submit" method="post">
+						<div id="successMessage" class="contact-handler" style="display: none">Form submitted successfully!</div>
+						<div id="errorMessage" class="contact-handler" style="display: none">Form error!</div>
+
+						<form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
 							<input type="text" name="name" placeholder="Your Name" />
 							<input type="text" name="email" placeholder="Your Email" />
 							<textarea name="message" placeholder="Hi..." rows="4"></textarea>
 							<input type="hidden" name="accessKey" value="7846bd1c-9865-4d8e-ac8b-4c7a6eee58de" />
-							<input type="hidden" name="redirectTo" value="https://jetherey.com/index.html" />
+							<!-- <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html" /> -->
 							<input class="button" type="submit" value="Submit" />
 						</form>
 						<div class="contact-photo" id="photo"></div>

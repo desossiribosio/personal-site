@@ -81,6 +81,70 @@ function onPageChange() {
 				duration: 800,
 			});
 		});
+
+		document.getElementById("contact-form").addEventListener("submit", function (event) {
+			event.preventDefault(); // Prevent the default form submission
+
+			var form = event.target;
+			var formData = new FormData(form);
+			var formDataObj = {};
+
+			formData.forEach((value, key) => (formDataObj[key] = value));
+
+			function handleError() {
+				const errorMessage = document.getElementById("errorMessage");
+				errorMessage.style.display = "block";
+				form.reset();
+				setTimeout(() => {
+					anime({
+						targets: errorMessage,
+						opacity: 0,
+						duration: 800,
+						complete: function (anim) {
+							errorMessage.style.display = "none";
+						},
+					});
+				}, 5000);
+			}
+
+			fetch(form.action, {
+				method: form.method,
+				body: JSON.stringify(formDataObj),
+				headers: { "Content-Type": "application/json" },
+			})
+				.then(function (response) {
+					if (response.ok) {
+						return response.json();
+					} else {
+						handleError();
+						throw new Error("Error submitting the form.");
+					}
+				})
+				.then(function (data) {
+					if (data.success) {
+						// Show the success message
+						const successMessage = document.getElementById("successMessage");
+						successMessage.style.display = "block";
+						form.reset();
+						setTimeout(() => {
+							anime({
+								targets: successMessage,
+								opacity: 0,
+								duration: 800,
+								complete: function (anim) {
+									successMessage.style.display = "none";
+								},
+							});
+						}, 5000);
+					} else {
+						handleError();
+						throw new Error("Form submission unsuccessful.");
+					}
+				})
+				.catch(function (error) {
+					console.error(error);
+				});
+		});
 	}
 }
 

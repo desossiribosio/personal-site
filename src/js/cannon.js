@@ -147,7 +147,7 @@ class ConfettiCannon {
 	}
 
 	drawVectorLine() {
-		this.ctx.strokeStyle = "pink";
+		this.ctx.strokeStyle = "white";
 		this.ctx.lineWidth = 2 * this.dpr;
 
 		const x0 = this.vector[0].x;
