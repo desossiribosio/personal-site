@@ -171,7 +171,8 @@ class ConfettiCannon {
 			const cr = _.random(30, 255);
 			const cg = _.random(30, 230);
 			const cb = _.random(30, 230);
-			const color = `rgb(${cr}, ${cg}, ${cb})`;
+			// const color = `rgb(${cr}, ${cg}, ${cb})`;
+			const color = `rgb(255,255,255)`;
 
 			const tilt = _.random(10, -10);
 			const tiltAngleIncremental = _.random(0.07, 0.05);
@@ -305,5 +306,3 @@ class ConfettiCannon {
 		this.drawConfetti();
 	}
 }
-
-const confetti = new ConfettiCannon();

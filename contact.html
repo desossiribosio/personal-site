@@ -9,8 +9,7 @@
 		/>
 		<link rel="stylesheet" href="dist/css/style.min.css" />
 
-		<script src="https://unpkg.com/swup@3.1.0/dist/Swup.umd.js"></script>
-		<title>Projects | jetherey</title>
+		<title>Contact | jetherey</title>
 	</head>
 	<body>
 		<canvas id="canvas"></canvas>
@@ -61,9 +60,9 @@
 				<main>
 					<div class="contact">
 						<div class="contact-description">
-							Yow, <span id="name">I'm Jether Rey</span>, I am a web developer and graphic designer, always passionate about the world of design and IT. Curiosity for
-							these disciplines drives me to explore and experiment with my creativity more and more. I am always committed and have great determination to
-							complete the tasks entrusted to me. In my free time, I enjoy going to the mountains with my dog Bear!
+							Yow, <span id="name">I'm Jether Rey</span>, I am a web developer and graphic designer, always passionate about the world of design and I.T.
+							Curiosity for these disciplines drives me to explore and experiment with my creativity more and more. I am always committed and have great
+							determination to complete the tasks entrusted to me. In my free time, I enjoy going to the mountains with my dog Bear!
 						</div>
 					</div>
 					<div class="contact-form">
@@ -81,13 +80,22 @@
 							<input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html" />
 							<input class="button" type="submit" value="Submit" />
 						</form>
-						<div class="contact-photo" id="photo">
-							
-						</div>
+						<div class="contact-photo" id="photo"></div>
 					</div>
 				</main>
 			</div>
 		</div>
-		<script src="../src/js/app.js"></script>
+		<script src="https://unpkg.com/swup@3.1.0/dist/Swup.umd.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+		<script src="./src/js/Physics2DPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+			integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="src/js/app.js"></script>
+		<script src="src/js/cannon.js"></script>
 	</body>
 </html>

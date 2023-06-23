@@ -9,7 +9,6 @@
 		/>
 		<link rel="stylesheet" href="dist/css/style.min.css" />
 
-		<script src="https://unpkg.com/swup@3.1.0/dist/Swup.umd.js"></script>
 		<title>Projects | jetherey</title>
 	</head>
 	<body>
@@ -57,7 +56,7 @@
 					</div>
 				</nav>
 				<main>
-					<div class="projects project-open bg-p2"></div>
+					<div class="projects project-open bg-p2" id="bcg"></div>
 					<div class="projects project-description">
 						<div class="back">
 							<a href="projects.html"
@@ -78,6 +77,17 @@
 				</main>
 			</div>
 		</div>
-		<script src="../src/js/app.js"></script>
+		<script src="https://unpkg.com/swup@3.1.0/dist/Swup.umd.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+		<script src="./src/js/Physics2DPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+			integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="src/js/app.js"></script>
+		<script src="src/js/cannon.js"></script>
 	</body>
 </html>
